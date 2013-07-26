@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
--- Console version 1.2.1 (25.7.2013)
+-- Console version 1.2.2 (26.7.2013)
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 -- A fairly simple in-game console implementation in Love2D. Contains support
@@ -493,7 +493,7 @@ end
 -- newline/scroll are optional and default to true so each log of text is \n'd
 -- and the console is scrolled to the bottom whenever text is added.
 function console.log(str, newline, scroll)
-    addText(str, newline, scroll)
+    addText(tostring(str), newline, scroll)
 end
 
 return console
