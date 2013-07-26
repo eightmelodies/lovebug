@@ -6,7 +6,28 @@ In-game console/debugging tool for LÖVE projects
 Usage
 -----
 
-This library is non-invasive to the default LÖVE functions, so you'll have to call the module's load(), draw(), and keypressed() functions explicitly.
+This library is non-invasive to the default LÖVE functions, so you'll have to call the module's load(), draw(), and keypressed() functions explicitly. The console is activated with '~', but this setting and many others can be edited in console.lua.
+
+Example
+-------
+
+```lua
+local console = require("console")
+
+function love.load()
+  console.load()
+  
+  console.log("hey look, i'm logging to the console.")
+end
+
+function love.draw()
+  console.draw()
+end
+
+function love.keypressed(key, unicode)
+  console.keypressed(key, unicode)
+end
+```
 
 License
 =======
