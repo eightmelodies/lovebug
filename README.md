@@ -3,6 +3,11 @@ lovebug
 
 In-game console/debugging tool for LÖVE projects
 
+Usage
+-----
+
+This library is non-invasive to the default LÖVE functions, so you'll have to call the module's load(), draw(), and keypressed() functions explicitly.
+
 License
 =======
 Copyright (c) 2013 Nicholas Campbell
