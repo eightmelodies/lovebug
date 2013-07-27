@@ -12,7 +12,7 @@ Example
 -------
 
 ```lua
-local console = require("console")
+local console = require("lovebug.console")
 
 function love.load()
   console.load()
