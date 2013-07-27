@@ -18,8 +18,8 @@
 -- in 0.8; is fixed in 0.9.
 --------------------------------------------------------------------------------
 -- Useage:
--- Simply require("console") to get the console module. Next, be sure to call
--- console.load() in love.love(), console.draw() in love.draw(), and
+-- Simply require("lovebug.console") to get the console module. Next, be sure to 
+-- call console.load() in love.love(), console.draw() in love.draw(), and
 -- console.keypressed() in love.keypressed(). Edit the settings below to taste.
 -- I thought about hooking into love's draw/load functions automagically, but
 -- that isn't always desired.
@@ -54,7 +54,7 @@
 --------------------------------------------------------------------------------
 local console = {}
 
-console.fontFile = "fonts/dejavu-fonts-ttf-2.33/ttf/DejaVuSansMono.ttf"
+console.fontFile = "lovebug/fonts/dejavu-fonts-ttf-2.33/ttf/DejaVuSansMono.ttf"
 console.fontSize = 12
 console.textColor = {255, 255, 255, 190}
 console.lineSpacing = 1
@@ -97,7 +97,7 @@ console.active = false
 --------------------------------------------------------------------------------
 -- Utility functions
 --------------------------------------------------------------------------------
-local console_utils = require("console_util")
+local console_utils = require("lovebug.console_util")
 
 local show = console_utils.show
 local pack = console_utils.pack
@@ -493,7 +493,7 @@ end
 -- newline/scroll are optional and default to true so each log of text is \n'd
 -- and the console is scrolled to the bottom whenever text is added.
 function console.log(str, newline, scroll)
-    addText(tostring(str), newline, scroll)
+    addText(str, newline, scroll)
 end
 
 return console
